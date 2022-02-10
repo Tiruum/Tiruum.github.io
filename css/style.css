@@ -1,14 +1,10 @@
-body {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	font-size: 24px;
-	color: #333;
-	height: 100%;
+.btn-primary {
+	background: #0160A2 !important;
+}
 
+body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
-  background-color: #fff;
-  color: #333;
 }
 
 a {
@@ -16,11 +12,11 @@ a {
 	-moz-transition: all.6s ease;
 	-webkit-transition: all.6s ease;
 	-ms-transition: all.6s ease;
-	color: #fff;
+	color: #0160A2;
 }
 
 a:hover {
-	color: #fff;
+	color: #0160A2;
 	text-decoration: none;
 	outline: 0;
 	transition: all.6s ease;
@@ -30,10 +26,28 @@ a:hover {
 }
 
 a:active {
-	color: #fff;
+	color: #002f50;
 }
 
 ::selection {
-	background: rgb(244, 167, 39) !important;
-	color: #fff !important;
+	background: #0160A2;
+	color: #fff;
+}
+
+.btn {
+	border-radius: 5px;
+}
+
+.form-control {
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-faki {
+	background: #0160A2;
+	color: #fff;
+}
+
+.btn-faki:hover {
+	background: #0160A2;
+	color: #fff;
 }
