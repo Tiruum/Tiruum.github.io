@@ -10,7 +10,7 @@
     <title>Web course</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -101,30 +101,10 @@
     <script type="text/javascript" src="https://tiruum.github.io/js/mdb.min.js"></script>
     <script type="text/javascript">
         // Scroll animation
-        async function doesManifestExistForCurrentPage() {
-                const manifestElement = document.querySelector('link[rel="manifest"]');
-                if (!manifestElement) {
-                    return false;
-                }
-                const manifestUrl = manifestElement.getAttribute('href');
-                if (!manifestElement) {
-                    return false;
-                }
-
-                // You could stop here and just return true.
-                // If you want to actually see if the manifest file exists on the
-                // server, use the following code:
-                try {
-                    const manifestResponse = await fetch(manifestUrl);
-                    // .ok will be true if fetch() returned a HTTP 2xx response,
-                    // and false otherwise.
-                    return manifestResponse.ok;
-                } catch (error) {
-                    // Or return true?
-                    // Depends on how you want to handle network failures.
-                    return false;
-                }
-            }
+        importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.2.0/workbox-sw.js');
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
     </script>
 </body>
 

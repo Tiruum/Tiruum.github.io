@@ -1,12 +1,12 @@
 {
-  "name": "Web Starter Kit",
-  "short_name": "WSK",
+  "name": "Студенческие сервисы ФАКИ",
+  "short_name": "stfaki",
   "icons": [{
-        "src": "icon.png",
+        "src": "/icon.svg",
         "sizes": "128x128",
-        "type": "image/png"
+        "type": "image/svg"
       }],
-  "start_url": "/index.html?homescreen=1",
+  "start_url": "/?home=true",
   "display": "standalone",
   "background_color": "#3E4EB8",
   "theme_color": "#0160A2"
