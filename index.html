@@ -100,7 +100,30 @@
     <script type="text/javascript" src="https://tiruum.github.io/js/mdb.min.js"></script>
     <script type="text/javascript">
         // Scroll animation
-        new WOW().init();
+        async function doesManifestExistForCurrentPage() {
+                const manifestElement = document.querySelector('link[rel="manifest"]');
+                if (!manifestElement) {
+                    return false;
+                }
+                const manifestUrl = manifestElement.getAttribute('href');
+                if (!manifestElement) {
+                    return false;
+                }
+
+                // You could stop here and just return true.
+                // If you want to actually see if the manifest file exists on the
+                // server, use the following code:
+                try {
+                    const manifestResponse = await fetch(manifestUrl);
+                    // .ok will be true if fetch() returned a HTTP 2xx response,
+                    // and false otherwise.
+                    return manifestResponse.ok;
+                } catch (error) {
+                    // Or return true?
+                    // Depends on how you want to handle network failures.
+                    return false;
+                }
+            }
     </script>
 </body>
 
