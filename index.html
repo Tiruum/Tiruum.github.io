@@ -115,7 +115,7 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column">
-                    <button type="button" class="btn btn-primary position-relative text-capitalize p-2 m-0 mb-2 container-fluid">Войти</button>
+                    <button type="button" class="btn btn-primary position-relative text-capitalize p-2 m-0 mb-2 container-fluid" onclick="notifSet()">Войти</button>
                     <button type="button" class="btn btn-dark position-relative text-capitalize p-2 m-0 mt-1 container-fluid">Войти через Google</button>
                 </div>
             </form>
@@ -129,11 +129,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-    <!-- MDB core JavaScript -->
+    <!-- PWA service-worker -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript">
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
+
+    <!-- Notification code -->
+    <script>
+        function notifyMe() {
+            var notification = new Notification("Напоминание о стирке", {
+                tag: "ache-mail",
+                body: "У тебя запланирована стирка в машинках №1, №2 в 17:30",
+                icon: "{% static 'main/img/icon.svg' %}"
+            });
+        }
+
+        function notifSet() {
+            if (!("Notification" in window))
+                alert("Ваш браузер не поддерживает уведомления.");
+            else if (Notification.permission === "granted")
+                setTimeout(notifyMe, 2000);
+            else if (Notification.permission !== "denied") {
+                Notification.requestPermission(function (permission) {
+                    if (!('permission' in Notification))
+                        Notification.permission = permission;
+                    if (permission === "granted")
+                        setTimeout(notifyMe, 2000);
+                });
+            }
         }
     </script>
 </body>
