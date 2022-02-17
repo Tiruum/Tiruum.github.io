@@ -120,3 +120,19 @@ a:active {
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     overflow: hidden;
 }
+
+::-webkit-scrollbar {
+  width: .5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: .5em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0160A2;
+  border-radius: .5em;
+}
