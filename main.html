@@ -64,7 +64,7 @@
 </head>
 
 <body>
-    <div class="container" id="fullpage">
+    <div class="container mt-5 pt-5">
         <section class="section">
             <div class="row d-flex mt-auto justify-content-between d-inline-block">
                 <div class="col-lg-7 d-lg-block d-md-block d-sm-block d-block mt-auto">
@@ -107,7 +107,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section mt-5 pt-5">
             <div class="row d-flex justify-content-between mt-auto">
                 <div class="col-lg-7 d-lg-block d-md-block d-sm-block d-block mt-auto">
                     <h1 class="display-3 fw-thin">Пополнение счета для записи в стиральную комнату</h1>
@@ -122,7 +122,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section mt-5 pt-5">
             <div class="row d-flex justify-content-between mt-auto">
                 <div class="col-lg-5 d-lg-block d-md-none d-sm-none d-none mt-auto">
                     <div class="container-fluid d-flex justify-content-end">
@@ -132,7 +132,7 @@
                 <div class="col-lg-7 d-lg-block d-md-block d-sm-block d-block mt-auto">
                     <h1 class="display-3 fw-thin">Не забывайте о времени своей стирки</h1>
                     <p class="display-7 fw-thin mb-5">Получайте push-уведомления за 10 минут до записи в стиральную комнату!</p>
-                    <button class="btn btn-primary fw-bolder text-capitalize btn-lg mt-5">Подключить</button>
+                    <button class="btn btn-primary fw-bolder text-capitalize btn-lg mt-5" onClick="notifyMe()">Подключить</button>
                 </div>
             </div>
         </section>
@@ -148,6 +148,12 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js');
         }
+    </script>
+
+    <script>
+        const windowOuterWidth = window.outerWidth;
+        const windowOuterHeight = window.outerHeight;
+        $('section').css('height', windowOuterHeight - (20/100)*windowOuterHeight);
     </script>
 
     <!-- Notification code -->
