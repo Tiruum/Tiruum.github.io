@@ -143,6 +143,11 @@ a:active {
   width: .9em;
   margin-right: 10px;
 }
+.display-7 {
+    font-size: 2.0rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
 
 /* Track */
 ::-webkit-scrollbar-track {
