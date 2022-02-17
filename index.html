@@ -138,7 +138,7 @@
                     Voluptatem autem temporibus neque sint!</p>
             </div>
             <div class="footer pt-2 pb-2" id="popup-close" style="border-top: 1px solid silver;">
-                <b style="color: #0060a2;">Закрыть</b>
+                <strong style="color: #0060a2;">Закрыть</strong>
             </div>
         </div>
     </div>
@@ -172,14 +172,14 @@
             border: 1px solid rgba( 255, 255, 255, 0.18 );
             overflow: hidden;
         }
+        body {
+            height: 70em;
+        }
     </style>
 
     <script>
         $('#enter').click(function(){
-            $('#popup-alert').fadeIn(100, function(){
-                $('#popup-alert').animate({
-                })
-            })
+            $('#popup-alert').fadeIn(100);
         });
         $('#popup-close').click(function(){
             $('#popup-alert').fadeOut(100)
