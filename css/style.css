@@ -93,3 +93,30 @@ a:active {
     background-color: #0160A2;
     border-color: #0160A2;
 }
+.darker-background {
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+}
+.footer {
+    cursor: pointer;
+}
+.footer:active {
+    background: #c7c7c7;
+    transition: ease .15s;
+    overflow: hidden;
+}
+.popup-body {
+    min-width: 20rem;
+    max-width: 30rem;
+    background: rgba( 255, 255, 255, 1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    overflow: hidden;
+}
