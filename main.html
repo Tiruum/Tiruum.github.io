@@ -19,10 +19,8 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- MDBootstrap -->
     <link rel="stylesheet" type="text/css" href="css/mdb.min.cs">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Блочная прокрутка -->
-    <link href="css/fullpage.css" type="text/css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="C:\Users\Timur\Desktop\webcourse\node_modules\bootstrap-icons\font\bootstrap-icons.css">
 
     <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
 
@@ -59,11 +57,73 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
 
     <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="position-absolute top-0 end-0" id="dismiss">
+                <i class="bi bi-x text-dark" style="font-size: 2em;"></i>
+            </div>
+    
+    
+            <h3 class="h3 p-4 ps-2 pe-1">Сервисы ФАКТ</h3>
+    
+            <ul class="list-unstyled components d-flex flex-column border-bottom">
+                <p class="d-flex ps-3">Долгопрудный</p>
+                <li class="">
+                    <a href="#dormSubmenu" class="d-flex ps-3 p-3 fs-5" data-bs-toggle="collapse" role="button"
+                        aria-expanded="false">Общежития</a>
+                    <div class="collapse" id="dormSubmenu">
+                        <ul class="list-unstyled">
+                            <li class="active"><a href="#" class="d-flex ps-4 p-2">Долгопрудный</a></li>
+                            <li><a href="#" class="d-flex ps-4 p-2">Жуковский</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#roomSubmenu" class="d-flex ps-3 p-3 fs-5" data-bs-toggle="collapse"
+                        aria-expanded="false">Общие комнаты</a>
+                    <ul class="collapse list-unstyled" id="roomSubmenu">
+                        <li><a href="#" class="d-flex ps-4 p-2">Клуб Романтики</a></li>
+                        <li><a href="#" class="d-flex ps-4 p-2">КДС</a></li>
+                        <li><a href="#" class="d-flex ps-4 p-2">Гладильня</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#serviceSubmenu" class="d-flex ps-3 p-3 fs-5" data-bs-toggle="collapse"
+                        aria-expanded="false">Услуги</a>
+                    <ul class="collapse list-unstyled" id="serviceSubmenu">
+                        <li><a href="#" class="d-flex ps-4 p-2">Пылесос</a></li>
+                        <li><a href="#" class="d-flex ps-4 p-2">Инструментарий</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <div class="dropup position-absolute w-100 border-top bottom-0">
+                <a class="d-flex ps-3 p-3 fs-5" type="button" id="profileDropdown" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Имя Фамилия
+                </a>
+                <div class="dropdown-menu" role="menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#">Пополнить счет</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Выйти</a>
+                </div>
+            </div>
+        </nav>
+        <a href="#" class="position-fixed top-0 start-0 fs-1" id="sidebarCollapse"><i class="bi bi-list"></i></a>
+    
+        <!-- Page Content Holder -->
+    
+    </div>
+    <div class="darker-background"></div>
+
     <div class="container mt-5 pt-5">
         <section class="section">
             <div class="row d-flex mt-auto justify-content-between d-inline-block">
@@ -181,6 +241,25 @@
                 });
             }
         }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // $("#sidebar").mCustomScrollbar({
+            //     theme: "minimal"
+            // });
+
+            $('#dismiss, .darker-background').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.darker-background').fadeOut(100);
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.darker-background').fadeIn(100);
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
     </script>
 </body>
 
