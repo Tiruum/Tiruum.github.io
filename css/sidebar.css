@@ -9,10 +9,10 @@ a, a:hover, a:focus {
     transition: all 0.2s;
 }
 #sidebar {
-    width: 250px;
+    width: 25em;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -25em;
     height: 100vh;
     z-index: 999;
     color: #333;
@@ -52,4 +52,11 @@ a, a:hover, a:focus {
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
     background: #0160A2;
+}
+
+@media screen and (max-width: 500px) {
+   #sidebar {
+    width: 100vw;
+    left: -100vw;
+    }
 }
