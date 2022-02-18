@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Gotham Pro;
+    src: url("font/gothamPro/gothampro.ttf");
+}
+
 .btn-primary {
 	background: #0160A2 !important;
 }
@@ -22,6 +27,15 @@ label {
     display: inline-block;
 }
 
+.fw-300 {
+    font-weight: 300 !important;
+}
+.fw-400 {
+    font-weight: 400 !important;
+}
+.fw-500 {
+    font-weight: 500 !important;
+}
 .fp-tableCell {
     display: table-cell;
     vertical-align: middle;
@@ -32,7 +46,7 @@ label {
 body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
-	font-family: "Roboto",sans-serif;
+	font-family: "Gotham Pro",sans-serif;
 }
 
 .text-09em {
