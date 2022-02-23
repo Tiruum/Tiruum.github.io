@@ -130,6 +130,7 @@ a, a:hover, a:focus {
     overflow: hidden;
     position: fixed;
     top: 0px;
+    z-index: 999;
 }
 .footer {
     border-top: .5px solid #cccccc;
@@ -153,6 +154,7 @@ a, a:hover, a:focus {
     border-radius: 1em;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     overflow: hidden;
+    z-index: 1001;
 }
 
 ::-webkit-scrollbar {
