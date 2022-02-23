@@ -1,0 +1,53 @@
+.btn-primary {
+	background: #0160A2 !important;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+
+a {
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+	color: #0160A2;
+}
+
+a:hover {
+	color: #0160A2;
+	text-decoration: none;
+	outline: 0;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:active {
+	color: #002f50;
+}
+
+::selection {
+	background: #0160A2;
+	color: #fff;
+}
+
+.btn {
+	border-radius: 5px;
+}
+
+.form-control {
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-faki {
+	background: #0160A2;
+	color: #fff;
+}
+
+.btn-faki:hover {
+	background: #0160A2;
+	color: #fff;
+}
