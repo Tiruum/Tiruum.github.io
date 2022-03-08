@@ -3,6 +3,10 @@
     src: url("font/gothamPro/gothampro.ttf");
 }
 
+:root {
+  --color-primary: #0160A2;
+}
+
 .btn-primary {
 	background: #0160A2 !important;
 }
@@ -12,6 +16,20 @@
 }
 
 .btn-primary:active {
+	background: #006fbe !important;
+}
+
+.btn-outline-primary {
+	border: 3px solid #0160A2 !important;
+    color: #0160A2 !important;
+}
+
+.btn-outline-primary:hover {
+	background: #0160A2 !important;
+    color: #fff !important;
+}
+
+.btn-outline-primary:active {
 	background: #006fbe !important;
 }
 
@@ -47,6 +65,11 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 	font-family: "Gotham Pro",sans-serif;
+    background: url('../back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-attachment: fixed;
 }
 
 .text-09em {
@@ -79,15 +102,16 @@ body {
     font-size: .81rem;
 }
 
-.waves-effect {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+.box-shadow {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.btn-sm {
+    margin: 0.175rem !important;
+}
+
+.btn-outline-light {
+    border: 3px solid #fff;
 }
 
 /* .form-check-input:focus {
@@ -120,40 +144,6 @@ a, a:hover, a:focus {
     border-color: #0160A2;
 }
 
-/* POP UP */
-
-.darker-background {
-    width: 100%;
-    min-height: 100%;
-    background-color: rgba(0,0,0,0.2);
-    overflow: hidden;
-    position: fixed;
-    top: 0px;
-}
-.footer {
-    border-top: .5px solid #cccccc;
-}
-.footer-button {
-    cursor: pointer;
-}
-.footer-button:active {
-    background: #cccccc;
-    transition: ease .15s;
-    overflow: hidden;
-}
-.popup-body {
-    min-width: 20rem;
-    max-width: 25rem;
-    background: rgba( 255, 255, 255, 0.75 );
-    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
-    box-shadow: inset 0 2px 8px 0 rgba(255, 255, 255, 1); /* Внутреннее свечение */
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 1em;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    overflow: hidden;
-}
-
 ::-webkit-scrollbar {
   width: .9em;
   margin-right: 10px;
@@ -163,16 +153,47 @@ a, a:hover, a:focus {
     font-weight: 300;
     line-height: 1.2;
 }
+div[data-src="wash"].cover {
+    background: url("https://www.udachishop.ru/images/p/medium/3fbe.jpg?forceSize=0");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+}
+
+div[data-src="common"].cover {
+    background: url("https://forestgum.ru/images/uploads/2016/маленькая%20гостиная/2610.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 
 /* Track */
 ::-webkit-scrollbar-track {
   /* box-shadow: inset 0 0 2px grey; */
   border-radius: 0em;
+  background: #003a62;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #0160A2;
   border-radius: .5em;
-  border: .15em solid #fff;
+  border: .15em solid #003a62;
+}
+
+#main-container {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.rounded-1em {
+    border-radius: 1em;
+}
+
+.rounded-start-1em {
+    border-bottom-left-radius: 1em !important;
+    border-top-left-radius: 1em !important;
+}
+
+.border-primary {
+    border-color: #0160A2 !important;
 }
