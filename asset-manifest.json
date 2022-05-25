@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.667fb669.chunk.css",
-    "main.js": "/static/js/main.5fd7e986.chunk.js",
-    "main.js.map": "/static/js/main.5fd7e986.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.fadf3b71.chunk.js": "/static/js/2.fadf3b71.chunk.js",
-    "static/js/2.fadf3b71.chunk.js.map": "/static/js/2.fadf3b71.chunk.js.map",
+    "main.css": "/static/css/main.8eb92663.css",
+    "main.js": "/static/js/main.e6899299.js",
+    "static/media/back.png": "/static/media/back.07a19a85f36719b891b2.png",
     "index.html": "/index.html",
-    "precache-manifest.cc1e8679357f22fb5a5c715dffa8fafa.js": "/precache-manifest.cc1e8679357f22fb5a5c715dffa8fafa.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.667fb669.chunk.css.map": "/static/css/main.667fb669.chunk.css.map",
-    "static/media/main.css": "/static/media/back.de3d6088.png",
-    "static/media/dasrLogo.svg": "/static/media/dasrLogo.591bd6e0.svg",
-    "static/media/miptLogo.svg": "/static/media/miptLogo.6378904a.svg"
-  }
+    "static/media/dasr.svg?6qqf6i": "/static/media/dasr.5a6cc4e077060ac324b3.svg",
+    "static/media/miptLogo.svg": "/static/media/miptLogo.1037f3e191ed286f65428e598f196fa7.svg",
+    "static/media/dasr.eot?6qqf6i": "/static/media/dasr.6809eafc078f927892a9.eot",
+    "static/media/dasr.woff?6qqf6i": "/static/media/dasr.0f40e9a85adb36f10d04.woff",
+    "static/media/dasr.ttf?6qqf6i": "/static/media/dasr.eb9c90cb70db610ae79b.ttf",
+    "main.8eb92663.css.map": "/static/css/main.8eb92663.css.map",
+    "main.e6899299.js.map": "/static/js/main.e6899299.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8eb92663.css",
+    "static/js/main.e6899299.js"
+  ]
 }
