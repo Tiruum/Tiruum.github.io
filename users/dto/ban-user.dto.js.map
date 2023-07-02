@@ -1,0 +1,1 @@
+{"version":3,"file":"ban-user.dto.js","sourceRoot":"","sources":["../../../src/users/dto/ban-user.dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,6CAA8C;AAE9C,MAAa,UAAU;CAQtB;AANG;IAAC,IAAA,qBAAW,EAAC,EAAC,OAAO,EAAE,KAAK,EAAE,WAAW,EAAE,0CAA0C,EAAC,CAAC;;0CAC/D;AAExB;IAAC,IAAA,qBAAW,EAAC,EAAC,OAAO,EAAE,eAAe,EAAE,WAAW,EAAE,cAAc,EAAC,CAAC;;6CAC1C;AAN/B,gCAQC"}
