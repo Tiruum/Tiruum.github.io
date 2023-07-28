@@ -62,8 +62,8 @@ body::-webkit-scrollbar {
 }
 
 @keyframes blink {
-    0%, 100% {opacity: 1;}
-    50% {opacity: 0;}
+    0%, 100% {opacity: 1}
+    50% {opacity: 0}
 }
 
 .animate-blob {
@@ -75,4 +75,19 @@ body::-webkit-scrollbar {
     33% {transform: translate(30px, -50px) scale(1.1)}
     66% {transform: translate(-20px, 20px) scale(0.9)}
     100% {transform: translate(0px, 0px) scale(1)}
+}
+
+.animate-wiggle {
+    display: inline-block;
+    animation: wiggle 2.5s infinite;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   70% { transform: rotate(0deg); }
+   75%  { transform: rotate(5deg); }
+   80% { transform: rotate(-5deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
